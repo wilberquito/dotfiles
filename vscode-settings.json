@@ -9,4 +9,5 @@
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.fontLigatures": true
 }
