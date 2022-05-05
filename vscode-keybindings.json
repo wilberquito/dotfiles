@@ -19,13 +19,13 @@
         "key": "shift shift",
         "command": "workbench.action.quickOpen"
     },
-    {
-        "key": "ctrl+k d",
+     {
+        "key": "ctrl+k i",
         "command": "editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
     },
     {
-        "key": "ctrl+k r",
+        "key": "ctrl+k u",
         "command": "editor.action.goToReferences",
         "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
     }
