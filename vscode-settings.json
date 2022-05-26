@@ -1,12 +1,14 @@
 {
-    "editor.matchBrackets": false,
+    "editor.matchBrackets": "never",
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "bearded-icons",
-    "workbench.colorTheme": "Codely Dark",
+    "workbench.colorTheme": "Shades of Purple",
     "editor.fontFamily": "Cascadia Code,  Consolas, 'Courier New', monospace",
-    "editor.fontSize": 13,
+    "editor.fontSize": 14,
     "editor.smoothScrolling": true,
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.fontLigatures": true,
+    "workbench.tree.indent": 20,
 }
