@@ -10,21 +10,6 @@
         "when": "terminalFocus"
     },
     {
-<<<<<<< HEAD
-=======
-        "key": "ctrl+mayus",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-        "key": "ctrl+,",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-        "key": "shift shift",
-        "command": "workbench.action.quickOpen"
-    },
-     {
->>>>>>> 8af66223f7f0dd73f793813a00e6d0e17011db0c
         "key": "ctrl+k i",
         "command": "editor.action.goToImplementation",
         "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
