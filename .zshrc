@@ -72,7 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 		git
-		zsh-autosuggestions)
+		zsh-autosuggestions
+		vi-mode
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,4 +111,5 @@ alias cls='clear'
 alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:preview-page-down"
 alias t='tree'
 eval "$(starship init zsh)"
+
 
