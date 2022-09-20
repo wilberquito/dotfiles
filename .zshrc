@@ -115,3 +115,5 @@ eval "$(starship init zsh)"
 # solves tmux color problems
 export TERM=xterm-256color
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
+ 
