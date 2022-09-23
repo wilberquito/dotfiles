@@ -112,9 +112,6 @@ alias pf="fzf --preview='less {}' --bind shift-up:preview-page-up,shift-down:pre
 alias t='tree'
 eval "$(starship init zsh)"
 
-# solves tmux color problems
-export TERM=xterm-256color
-
 # loads fzf configuration file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
  
