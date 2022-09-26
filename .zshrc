@@ -115,3 +115,5 @@ eval "$(starship init zsh)"
 # loads fzf configuration file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
  
+
+[ -f "/home/wbermeo/.ghcup/env" ] && source "/home/wbermeo/.ghcup/env" # ghcup-env
