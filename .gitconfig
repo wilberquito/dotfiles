@@ -107,6 +107,10 @@
 
   # add just the files that are updated.
   au = add --update
+    
+  # add and commit modified files
+  ac = commit -a -m
+
 
   ### branch aliases ###
 
@@ -1753,3 +1757,4 @@
   svn-m = merge --squash
   svn-c = svn dcommit
   svn-cp = !GIT_EDITOR='sed -i /^git-svn-id:/d' git cherry-pick --edit
+
