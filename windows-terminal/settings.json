@@ -80,7 +80,7 @@
                 "experimental.retroTerminalEffect": false,
                 "font": 
                 {
-                    "face": "RobotoMono NF",
+                    "face": "mononoki NF BoldItalic",
                     "size": 11,
                     "weight": "medium"
                 },
