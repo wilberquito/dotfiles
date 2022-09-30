@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias help='man'
 alias dirs='dirs -v'
 alias vim='nvim'
 alias vi='nvim'
