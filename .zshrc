@@ -114,10 +114,17 @@ alias cls='clear'
 alias fzp="fzf --preview='bat --color=always --style=numbers {}' --bind ctrl-k:preview-up,ctrl-j:preview-down,ctrl-l:preview-page-down,ctrl-h:preview-page-up"
 alias t='tree'
 
-eval "$(starship init zsh)"
+
+# --- EXTERNAL CONFIGURATIONS FILES ---
 
 # loads fzf configuration file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
- 
 
+# haskell cup  
 [ -f "/home/wbermeo/.ghcup/env" ] && source "/home/wbermeo/.ghcup/env" # ghcup-env
+
+# --- INIT PROGRAMS AT START UP --- 
+eval "$(starship init zsh)" 2>/dev/null 
+
+neofetch 2>/dev/null
+
