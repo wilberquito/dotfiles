@@ -126,5 +126,3 @@ alias t='tree'
 # --- INIT PROGRAMS AT START UP --- 
 eval "$(starship init zsh)" 2>/dev/null 
 
-neofetch 2>/dev/null
-
