@@ -113,6 +113,7 @@ alias vi='nvim'
 alias cls='clear'
 alias fzp="fzf --preview='bat --color=always --style=numbers {}' --bind ctrl-k:preview-up,ctrl-j:preview-down,ctrl-l:preview-page-down,ctrl-h:preview-page-up"
 alias t='tree'
+alias ide='~/.local/bin/ide.sh'
 
 
 # --- EXTERNAL CONFIGURATIONS FILES ---
