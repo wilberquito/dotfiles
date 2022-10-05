@@ -111,7 +111,6 @@
   # add and commit modified files
   ac = commit -a -m
 
-
   ### branch aliases ###
 
   # branch and only list branches whose tips are reachable from the specified commit (HEAD if not specified).
@@ -462,6 +461,9 @@
 
   ### status aliases ###
 
+  # status with all elements flatten
+  su = status -u
+  
   # status with short format instead of full details
   ss = status --short
 
