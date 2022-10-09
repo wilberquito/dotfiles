@@ -1,9 +1,8 @@
 [core]
-	editor = \"C:\\Users\\MR. ROBOT\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	editor = /usr/local/bin/nvim
 [user]
 	email = wbq.software@gmail.com
 	name = wilberquito
-
 
 # -*- mode: gitconfig; -*-
 # vim: set filetype=gitconfig:
