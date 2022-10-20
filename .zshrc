@@ -125,8 +125,10 @@ alias ide='~/.local/bin/ide.sh'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
 
 # haskell cup  
-[ -f "/home/wbermeo/.ghcup/env" ] && source "/home/wbermeo/.ghcup/env" # ghcup-env
+#[ -f "/home/wbermeo/.ghcup/env" ] && source "/home/wbermeo/.ghcup/env" # ghcup-env
 
 # --- INIT PROGRAMS AT START UP --- 
 eval "$(starship init zsh)" 2>/dev/null 
 
+
+[ -f "/home/wilberquito/.ghcup/env" ] && source "/home/wilberquito/.ghcup/env" # ghcup-env
