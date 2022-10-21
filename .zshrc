@@ -131,4 +131,4 @@ alias ide='~/.local/bin/ide.sh'
 eval "$(starship init zsh)" 2>/dev/null 
 
 
-[ -f "/home/wilberquito/.ghcup/env" ] && source "/home/wilberquito/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
