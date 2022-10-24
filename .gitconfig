@@ -121,6 +121,10 @@
   # branch with edit description
   bed = branch --edit-description
 
+  # delete branch
+  del = branch -d
+  nuke = branch -D
+
   # branch with show description; ideally git will add this feature in the future as `git --show-description`
   bsd = "!f(){ \
     branch=\"${1:-$(git rev-parse --abbrev-ref HEAD 2>/dev/null)}\";  \
