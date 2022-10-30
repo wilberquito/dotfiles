@@ -1,5 +1,8 @@
 [core]
 	editor = /usr/local/bin/nvim
+    # Configure Git to ensure line endings in files you checkout are correct for Windows.
+    # For compatibility, line endings are converted to Unix style when you commit files.
+	autocrlf = true
 [user]
 	email = wbq.software@gmail.com
 	name = wilberquito
