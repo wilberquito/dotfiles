@@ -429,6 +429,8 @@
   # remote prune - deletes all stale remote-tracking branches under <name>.
   rrp = remote prune
 
+  remotes = remote -vv
+
   ### revert aliases ###
 
   # revert - undo the changes from some existing commits
@@ -475,6 +477,9 @@
 
   # status with short format and showing branch and tracking info.
   ssb = status --short --branch
+
+  # removes file from stage area
+  unstage = restore --stage
 
   ### alias management aliases ###
 
