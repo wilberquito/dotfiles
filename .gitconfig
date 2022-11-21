@@ -126,6 +126,7 @@
 
   # delete branch
   del = branch -d
+  # force delete branch
   nuke = branch -D
 
   # branch with show description; ideally git will add this feature in the future as `git --show-description`
