@@ -121,6 +121,9 @@
   # branch with edit description
   bed = branch --edit-description
 
+  # create new branch
+  fork = switch -c
+
   # delete branch
   del = branch -d
   nuke = branch -D
