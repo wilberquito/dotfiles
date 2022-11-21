@@ -124,11 +124,9 @@ alias ide='~/.local/bin/ide.sh'
 # loads fzf configuration file
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
 
-# haskell cup  
-#[ -f "/home/wbermeo/.ghcup/env" ] && source "/home/wbermeo/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # --- INIT PROGRAMS AT START UP --- 
 eval "$(starship init zsh)" 2>/dev/null 
 
 
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
