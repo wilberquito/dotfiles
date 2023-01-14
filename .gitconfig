@@ -122,7 +122,7 @@
   bed = branch --edit-description
 
   # create new branch
-  fork = switch -c
+  new = switch -c
 
   # delete branch
   del = branch -d
@@ -165,6 +165,9 @@
   # checkout - update the working tree to match a branch or paths. [same as "o" for "out"]
   co = checkout
   cong = checkout --no-guess
+
+  # comeback to the last commit
+  return = co -
 
   ### cherry-pick aliases ###
 
