@@ -1,7 +1,6 @@
-# If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
-# It sets the terminal type for which output is to be prepared. 
+# It sets the terminal type for which output is to be prepared.
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
@@ -11,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="wezm+"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,11 +72,12 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(
-        z
+    z
 		git
 		vi-mode
-        command-not-found
+    command-not-found
 		zsh-autosuggestions
 	)
 
@@ -122,12 +122,12 @@ alias ide='~/.local/bin/ide.sh'
 # --- EXTERNAL CONFIGURATIONS FILES ---
 
 # loads fzf configuration file
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-# --- INIT PROGRAMS AT START UP --- 
-eval "$(starship init zsh)" 2>/dev/null 
+# --- INIT PROGRAMS AT START UP ---
+eval "$(starship init zsh)" 2>/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -135,16 +135,15 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/wilber/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/wilber/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/wilber/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
+        . "/usr/etc/profile.d/conda.sh"
     else
-        export PATH="/home/wilber/anaconda3/bin:$PATH"
+        export PATH="/usr/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
