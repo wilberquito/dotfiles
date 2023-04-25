@@ -10,7 +10,8 @@ To install `zsh` with package manager
 sudo apt install zsh
 ```
 
-Make it your default shell: chsh -s $(which zsh) or use sudo lchsh $USER if you are on Fedora.
+Make it your default shell: `chsh -s $(which zsh)`
+or use `sudo lchsh $USER` if you are on Fedora.
 
 ## Neovim configuration
 

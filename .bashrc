@@ -29,7 +29,6 @@ unset rc
 alias g='git'
 man() { $1 --help; }
 
-exec zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -45,4 +44,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
