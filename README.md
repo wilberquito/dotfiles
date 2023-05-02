@@ -8,6 +8,7 @@ To install `zsh` with package manager
 
 ```sh
 sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 Make it your default shell: `chsh -s $(which zsh)`
@@ -28,6 +29,9 @@ ln -s <clone-dir> ~/.config/nvim
 ```sh
 ln -s <clone-dir>/.tmux.conf ~/.tmux.conf
 tmux source-file ~/.tmux.conf
+
+# To install the packages
+prefix + I
 ```
 
 ## Extensions
