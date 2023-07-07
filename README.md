@@ -39,5 +39,6 @@ prefix + I
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 - [fzf](https://github.com/junegunn/fzf)
 - [starship](https://starship.rs/)
+- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - [ohmyzsh](https://ohmyz.sh/#install)
 - [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
