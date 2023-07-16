@@ -74,11 +74,12 @@ ZSH_THEME="wezm+"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-    z
-		git
-		vi-mode
-    command-not-found
-		zsh-autosuggestions
+  aliases
+  thefuck
+  z
+	git
+  command-not-found
+	zsh-autosuggestions
 	)
 
 source $ZSH/oh-my-zsh.sh
@@ -109,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias aliases='acs'
 alias help='man'
 alias dirs='dirs -v'
 alias vim='nvim'
