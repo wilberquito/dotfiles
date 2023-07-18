@@ -1,5 +1,5 @@
 [core]
-	editor = /usr/local/bin/nvim
+	editor = /usr/bin/nvim
 [user]
 	email = wbq.software@gmail.com
 	name = wilberquito
@@ -77,4 +77,3 @@
 
 [include]
   path = ~/.gitalias
-
