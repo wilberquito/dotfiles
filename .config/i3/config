@@ -102,6 +102,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Take screen shots
+# requirements: maim, xclip
+bindsym $mod+p exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+bindsym $mod+Shift+p exec --no-startup-id maim | xclip -selection clipboard -t image/png
+
+# bindsym $mod+p focus parent
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
