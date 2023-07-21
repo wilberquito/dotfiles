@@ -129,7 +129,7 @@ alias ide='~/.local/bin/ide.sh'
 [ -f ~/.fzf/shell/completion.zsh ] && source ~/.fzf/shell/completion.zsh
 [ -f ~/.fzf/shell/key-bindings.zsh ] && source ~/.fzf/shell/key-bindings.zsh
 
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+#[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # --- INIT PROGRAMS AT START UP ---
 eval "$(starship init zsh)" 2>/dev/null
@@ -140,15 +140,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/wilberquito/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/etc/profile.d/conda.sh" ]; then
-        . "/usr/etc/profile.d/conda.sh"
+    if [ -f "/home/wilberquito/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/wilberquito/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/bin:$PATH"
+        export PATH="/home/wilberquito/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+[ -f "/home/wilberquito/.ghcup/env" ] && source "/home/wilberquito/.ghcup/env" # ghcup-env
