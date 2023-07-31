@@ -109,7 +109,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
+alias tm='tmux'
+alias tmn='tmux new -s'
+alias tma='tmux attach -t'
+alias tmrs='tmux rename-session'
 alias aliases='acs'
 alias help='man'
 alias dirs='dirs -v'
@@ -118,7 +122,7 @@ alias vi='nvim'
 alias cls='clear'
 alias fzp="fzf --preview='bat --color=always --style=numbers {}' --bind ctrl-k:preview-up,ctrl-j:preview-down,ctrl-l:preview-page-down,ctrl-h:preview-page-up"
 alias t='tree'
-alias ide='~/.local/bin/ide.sh'
+alias ide='vi ~/.local/bin/ide.sh'
 
 
 # --- EXTERNAL CONFIGURATIONS FILES ---
