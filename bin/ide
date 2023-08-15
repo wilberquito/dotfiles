@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# ██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗
+# ██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝
+# ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗  
+# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝  
+# ██║  ██║███████╗██║  ██║██████╔╝██║ ╚═╝ ██║███████╗
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚══════╝
+#
+# Author: wilberquito
+# License: WTFPL
+# Description:
+# 	- Emulates the behavior of an ide. 
+# 	  Opening 3 panes that run: vi, git status and git log
+# Requirements:
+# 	- tmux
+                                                   
 tmux new-session \; \
   split-window -h -p 65 \; \
   send-keys 'vi .' C-m \; \
