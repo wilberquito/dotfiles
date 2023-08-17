@@ -44,7 +44,7 @@ setup_gitconfig () {
 	# Checks if the gitconfig symlink file exists,
 	# if it does not, it creates one using a skeleton example
 
-	if ! [ -f dotfiles/home/gitconfig.symlink ]
+	if ! [ -f symlink/home/gitconfig.symlink ]
 	then
 		info 'setup gitconfig'
 
@@ -58,7 +58,7 @@ setup_gitconfig () {
 		user ' - What is your github author email?'
 		read -e git_authoremail
 
-		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" example/gitconfig.symlink.example > dotfiles/home/gitconfig.symlink
+		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" example/gitconfig.symlink.example > symlink/home/gitconfig.symlink
 
 		success 'gitconfig'
 	fi
