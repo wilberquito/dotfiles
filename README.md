@@ -1,48 +1,37 @@
-# Set up working space
+# A glorified personal dotfiles
 
-## ASCII Text
+This repository tends to be a solution to automate the installation
+of main programs, set their configurations via soft links and finally
+bootstrap the system.
 
-To generate ASCII text to make comments I use [ANSI Shadow](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+### Installation steps
 
-## ZSH
-
-The wikipedia of `zsh` can be found [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).
-
-To install `zsh` with package manager
+- Clone the glorified dotfiles repository.
 
 ```sh
-sudo apt install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$ git clone --depth 1 https://github.com/wilberquito/dotfiles
 ```
 
-Make it your default shell: `chsh -s $(which zsh)`
-or use `sudo lchsh $USER` if you are on Fedora.
-
-## Neovim configuration
-
-I use to work with `NvimChad` [fork](https://github.com/wilberquito/nvchad.lua/).
+- Change directory to script section.
 
 ```sh
-git clone git@github.com:wilberquito/nvchad.lua.git
-git switch <custom-branch>
-ln -s <clone-dir> ~/.config/nvim
+$ cd dotfiles/script
 ```
 
-## Tmux configuration
+- Install the main programs (you need to be a superuser).
 
 ```sh
-ln -s <clone-dir>/.tmux.conf ~/.tmux.conf
-tmux source-file ~/.tmux.conf
-
-# To install the packages
-prefix + I
+$ sudo ./install
 ```
 
-## Extensions
+- Link config program files to your system.
 
-- [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
-- [fzf](https://github.com/junegunn/fzf)
-- [starship](https://starship.rs/)
-- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- [ohmyzsh](https://ohmyz.sh/#install)
-- [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+```sh
+$ ./symlink
+```
+
+- Bootstrap the system
+
+```sh
+$ ./bootstrap
+```
