@@ -17,7 +17,7 @@
 if test ! $(which neofetch)
 then
 	echo "	Installing Neofetch for you."
-	dnf install neofetch
+	dnf -y install neofetch
 fi
 
 exit 0

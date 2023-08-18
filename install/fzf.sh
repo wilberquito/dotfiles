@@ -17,7 +17,7 @@
 if test ! $(which fzf)
 then
 	echo "	Installing fzf for you."
-	dnf install fzf
+	dnf -y install fzf
 fi
 
 exit 0

@@ -17,7 +17,7 @@
 if test ! $(which kitty)
 then
 	echo "	Installing kitty for you."
-	dnf install kitty
+	dnf -y install kitty
 fi
 
 exit 0

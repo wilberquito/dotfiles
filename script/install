@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Run all script that install main programs
+
+set -e
+
+cd "$(dirname $0)"/../install/
+
+# find the installers and run them iteratively
+find . -name '*.sh' | while read installer ; do sh -c "${installer}" ; done

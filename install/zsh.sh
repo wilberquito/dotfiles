@@ -18,7 +18,7 @@
 if test ! $(which zsh)
 then
 	echo "	Installing Zsh for you."
-	dnf install zsh
+	dnf -y install zsh
 fi
 
 exit 0

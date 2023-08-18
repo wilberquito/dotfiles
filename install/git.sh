@@ -17,7 +17,7 @@
 if test ! $(which git)
 then
 	echo "	Installing git for you."
-	dnf install git
+	dnf -y install git
 fi
 
 exit 0

@@ -17,10 +17,6 @@
 
 DOTFILES_ROOT=$(pwd -P)
 cd "$(dirname "$0")/.."
-echo "$(pwd)"
-
-echo $DOTFILES_ROOT
-
 
 info () {
 	printf "\r  [ \033[00;34m..\033[0m ] $1\n"
