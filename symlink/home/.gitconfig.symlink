@@ -1,14 +1,14 @@
 [core]
-	editor = /usr/bin/nvim
+editor = /usr/bin/nvim
 [user]
-	email = wbq.software@gmail.com
-	name = wilberquito
+email = wbq.software@gmail.com
+name = wilberquito
 [fetch]
-  prune = true
+prune = true
 [pull]
-  rebase = true
+rebase = true
 [diff]
-  colorMoved = zebra
+colorMoved = zebra
 # -*- mode: gitconfig; -*-
 # vim: set filetype=gitconfig:
 
@@ -76,4 +76,5 @@
 ##
 
 [include]
-  path = ~/.gitalias
+path = ~/.gitalias
+

@@ -40,11 +40,11 @@ setup_gitconfig () {
 	# Checks if the gitconfig symlink file exists,
 	# if it does not, it creates one using a skeleton example
 
-	if ! [ -f symlink/home/gitconfig.symlink ]
+	if ! [ -f symlink/home/.gitconfig.symlink ]
 	then
 		info 'setup gitconfig'
 
-		if ! [ -f examples/gitconfig.symlink.example ]
+		if ! [ -f examples/.gitconfig.symlink.example ]
 		then
 			fail 'gitconfig skeleton not found'
 		fi
@@ -54,11 +54,48 @@ setup_gitconfig () {
 		user ' - What is your github author email?'
 		read -e git_authoremail
 
-		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" example/gitconfig.symlink.example > symlink/home/gitconfig.symlink
+		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" examples/.gitconfig.symlink.example > symlink/home/.gitconfig.symlink
 
 		success 'gitconfig'
 	fi
 }
 
+
+setup_symlink() {
+
+	setup_home_symlink
+	setup_config_symlink
+
+}
+
+
+setup_home_symlink() {
+	info 'installing home symbolic link'
+
+	for src in $(find -H "$(pwd)/symlink/home/" -maxdepth 1 -name '*.symlink')
+	do
+		dst="$HOME/$(basename "${src%.*}")"
+		# link_file "$src" "$dst"
+	done
+}
+
+
+setup_config_symlink() {
+	info 'installing .config symbolic link'
+
+	for src in $(find -H "$(pwd)/symlink/config/" -maxdepth 1 -name '*.symlink')
+	do
+		dst="$HOME/$(basename "${src%.*}")"
+		# link_file "$src" "$dst"
+	done
+}
+
+link_file() {
+	echo 'TODO'
+}
+
+
 setup_gitconfig
+
+setup_symlink
 
