@@ -48,7 +48,7 @@ setup_gitconfig () {
 	then
 		info 'setup gitconfig'
 
-		if ! [ -f example/gitconfig.symlink.example ]
+		if ! [ -f examples/gitconfig.symlink.example ]
 		then
 			fail 'gitconfig skeleton not found'
 		fi
