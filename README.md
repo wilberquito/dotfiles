@@ -1,5 +1,9 @@
 # Set up working space
 
+## ASCII Text
+
+To generate ASCII text to make comments I use [ANSI Shadow](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20)
+
 ## ZSH
 
 The wikipedia of `zsh` can be found [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).
