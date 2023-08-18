@@ -6,32 +6,32 @@ bootstrap the system.
 
 Installation steps:
 
-- Clone the glorified dotfiles repository.
+1. Clone the glorified dotfiles repository.
 
-```sh
-$ git clone --depth 1 https://github.com/wilberquito/dotfiles
-```
+    ```sh
+    $ git clone --depth 1 https://github.com/wilberquito/dotfiles
+    ```
 
-- Change directory to script section.
+2. Change directory to script section.
 
-```sh
-$ cd dotfiles/script
-```
+    ```sh
+    $ cd dotfiles/script
+    ```
 
-- Install the main programs (you need to be a superuser).
+3. Install the main programs (you need to be a superuser).
 
-```sh
-$ sudo ./install
-```
+    ```sh
+    $ sudo ./install
+    ```
 
-- Link config program files to your system.
+4. Link config program files to your system.
 
-```sh
-$ ./symlink
-```
+    ```sh
+    $ ./symlink
+    ```
 
-- Bootstrap the system
+5. Bootstrap the system
 
-```sh
-$ ./bootstrap
-```
+    ```sh
+    $ ./bootstrap
+    ```
