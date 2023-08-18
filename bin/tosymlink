@@ -10,24 +10,27 @@
 # Author: wilberquito
 # License: WTFPL
 # Description:
-# 	- Dotfiles or hidden files to symbol links
+# 	- files and folder to symlink extension
 
 
 WORKING_ROOT=$(pwd -P)
+EXTENSION=".symlink"
 
 info () {
 	printf "\r  [ \033[00;34m..\033[0m ] $1\n"
 }
 
 tosymlink() {
-	info 'dotfiles to symbol links'
+	info 'files and folders to symlink'
 
-	for src in $(find -H "$WORKING_ROOT" -maxdepth 2 -name '.*' -not -path '.')
+	for src in $(find -H "$WORKING_ROOT" -maxdepth 1 -mindepth 1 -not -path '.')
 	do
-		symlink=$(echo "${src}" | sed -e 's:.*/::' | sed -e 's:^.::')
-		dst="$WORKING_ROOT/$symlink.symlink"
-		echo $src $dst
-		mv "$src" "$dst"
+		if [[ ! "$src" == *$EXTENSION ]]
+		then
+			dst="$src$EXTENSION"
+			echo "Moving: $src --> $dst"
+			mv "$src" "$dst"
+		fi
 	done
 }
 
