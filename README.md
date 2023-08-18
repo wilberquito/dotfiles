@@ -4,7 +4,7 @@ This repository tends to be a solution to automate the installation
 of main programs, set their configurations via soft links and finally
 bootstrap the system.
 
-### Installation steps
+Installation steps:
 
 - Clone the glorified dotfiles repository.
 
