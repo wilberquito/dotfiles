@@ -11,8 +11,6 @@
 # License: WTFPL
 # Description:
 # 	- Run all script that install main programs
-# Requirements:
-# 	- Being a super user
 
 
 set -e
