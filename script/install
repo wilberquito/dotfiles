@@ -1,6 +1,19 @@
 #!/bin/bash
+
+# ██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗
+# ██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝
+# ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗  
+# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝  
+# ██║  ██║███████╗██║  ██║██████╔╝██║ ╚═╝ ██║███████╗
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚══════╝
 #
-# Run all script that install main programs
+# Author: wilberquito
+# License: WTFPL
+# Description:
+# 	- Run all script that install main programs
+# Requirements:
+# 	- Being a super user
+
 
 set -e
 
