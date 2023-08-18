@@ -33,4 +33,5 @@ chsh -s $(which zsh)
 #    ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
 tmux new -d -s mySession
 tmux send-keys -t mySession.1 "tmux source-file ~/.tmux.conf" ENTER
+# TODO: install the plugins C-space I automatically
 tmux kill-server
