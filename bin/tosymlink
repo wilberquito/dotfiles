@@ -1,4 +1,17 @@
-# !bin/bash
+#!/bin/bash
+
+# ██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗
+# ██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝
+# ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗  
+# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝  
+# ██║  ██║███████╗██║  ██║██████╔╝██║ ╚═╝ ██║███████╗
+# ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚══════╝
+#
+# Author: wilberquito
+# License: WTFPL
+# Description:
+# 	- Dotfiles or hidden files to symbol links
+
 
 WORKING_ROOT=$(pwd -P)
 
@@ -7,7 +20,7 @@ info () {
 }
 
 tosymlink() {
-	info 'dotfile to symlink'
+	info 'dotfiles to symbol links'
 
 	for src in $(find -H "$WORKING_ROOT" -maxdepth 2 -name '.*' -not -path '.')
 	do
