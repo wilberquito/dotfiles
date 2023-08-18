@@ -1,0 +1,3 @@
+# do not track tmux plugins that appear after installation
+symlink/home/.tmux.symlink/plugins
+!symlink/home/.tmux.symlink/plugins/tpm
