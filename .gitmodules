@@ -1,0 +1,3 @@
+[submodule "symlink/config/nvim.symlink"]
+	path = symlink/config/nvim.symlink
+	url = https://github.com/wilberquito/nvchad.lua/
