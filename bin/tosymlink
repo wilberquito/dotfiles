@@ -1,0 +1,21 @@
+# !bin/bash
+
+WORKING_ROOT=$(pwd -P)
+
+info () {
+	printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+}
+
+tosymlink() {
+	info 'dotfile to symlink'
+
+	for src in $(find -H "$WORKING_ROOT" -maxdepth 2 -name '.*' -not -path '.')
+	do
+		symlink=$(echo "${src}" | sed -e 's:.*/::' | sed -e 's:^.::')
+		dst="$WORKING_ROOT/$symlink.symlink"
+		echo $src $dst
+		mv "$src" "$dst"
+	done
+}
+
+tosymlink
