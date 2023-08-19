@@ -1,30 +1,43 @@
 # Source tutorial from youtube
 # url: https://www.youtube.com/watch?v=DzNmUNvnB04
 
+set -g @plugin 'catppuccin/tmux'
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @plugin 'catppuccin/tmux'
 
 run '~/.tmux/plugins/tpm/tpm'
 
-# Theme configuration
-set -g @catppuccin_flavour 'frappe' # or frappe, macchiato, mocha
-set -g @catppuccin_window_tabs_enabled "off"
-set -g @catppuccin_date_time "%Y-%m-%d %H:%M"
+# Catppucin theme configuration
+set -g @catppuccin_flavour 'macchiato' # or frappe, macchiato, mocha or latte
+
+set -g @catppuccin_window_left_separator "█"
+set -g @catppuccin_window_right_separator "█ "
+set -g @catppuccin_window_number_position "right"
+set -g @catppuccin_window_middle_separator "  █"
+
+set -g @catppuccin_window_default_fill "number"
+
+set -g @catppuccin_window_current_fill "number"
+set -g @catppuccin_window_current_text "#W"
+set -g @catppuccin_window_default_text "#W"
+
+set -g @catppuccin_status_modules "directory session date_time"
+set -g @catppuccin_status_left_separator  ""
+set -g @catppuccin_status_right_separator " "
+set -g @catppuccin_status_right_separator_inverse "yes"
+set -g @catppuccin_status_fill "all"
+set -g @catppuccin_status_connect_separator "no"
+
+set -g @catppuccin_directory_text "#{pane_current_path}"
+
 
 # Set prefix
 unbind C-b
 set -g prefix C-Space
 bind C-space send-prefix
 
-# Fix colors
-
-set -g default-terminal "tmux-256color"
-set -ga terminal-overrides ",tmux-256color:Tc"
-
-# set-opttmux show-option -qvg default-terminalion -sa terminal-overrides ",xterm*:Tc"
 
 # Set new panes to open in current directory
 bind c new-window -c "#{pane_current_path}"
@@ -69,7 +82,7 @@ set-window-option -g mode-keys vi
 
 # # for tmux's default "emacs" mode-keys (copy-mode)
 # bind-key -T copy-mode MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xclip -selection primary -filter | xclip -selection clipboard"
-#
+
 
 # TMUX configuration for copying selection buffer to the (X11) clipboard.
 
@@ -84,7 +97,6 @@ bind-key C-v run "xsel -o --clipboard 2>/dev/null | tmux load-buffer - && tmux p
 
 # Only in tmux 1.8 and higher. Copy selection will set (X11) clipboard as well.
 bind-key -Tcopy-mode-vi Enter send -X copy-pipe-and-cancel "xsel -i --clipboard"
-
 
 # Start window panes at 1, not 0
 set -g base-index 1
