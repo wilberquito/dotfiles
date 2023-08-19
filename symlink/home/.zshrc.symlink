@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="wezm+"
+ZSH_THEME="steeef"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +75,6 @@ ZSH_THEME="wezm+"
 
 plugins=(
   aliases
-  thefuck
   z
 	git
   command-not-found
@@ -84,7 +83,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+
+# ███████╗███╗   ██╗██╗   ██╗██╗██████╗  ██████╗ ███╗   ██╗███╗   ███╗███████╗███╗   ██╗████████╗
+# ██╔════╝████╗  ██║██║   ██║██║██╔══██╗██╔═══██╗████╗  ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+# █████╗  ██╔██╗ ██║██║   ██║██║██████╔╝██║   ██║██╔██╗ ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║
+# ██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║   ██║██║╚██╗██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║
+# ███████╗██║ ╚████║ ╚████╔╝ ██║██║  ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║
+# ╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -110,20 +115,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias tm='tmux'
-alias tmn='tmux new -s'
-alias tma='tmux attach -t'
-alias tmrs='tmux rename-session'
-alias tmkk='tmux kill-server'
-alias aliases='acs'
-alias help='man'
-alias dirs='dirs -v'
-alias vim='nvim'
-alias vi='nvim'
-alias cls='clear'
-alias fzp="fzf --preview='bat --color=always --style=numbers {}' --bind ctrl-k:preview-up,ctrl-j:preview-down,ctrl-l:preview-page-down,ctrl-h:preview-page-up"
-alias t='tree'
-alias ide='~/.local/bin/ide.sh'
+[ -f ~/.env_variables ] && source ~/.env_variables
+[ -f ~/.env_aliases ] && source ~/.env_aliases
+
 
 
 # --- EXTERNAL CONFIGURATIONS FILES ---
@@ -131,19 +125,16 @@ alias ide='~/.local/bin/ide.sh'
 
 # ███████╗███████╗███████╗
 # ██╔════╝╚══███╔╝██╔════╝
-# █████╗    ███╔╝ █████╗  
-# ██╔══╝   ███╔╝  ██╔══╝  
-# ██║     ███████╗██║     
-# ╚═╝     ╚══════╝╚═╝     
-                        
+# █████╗    ███╔╝ █████╗
+# ██╔══╝   ███╔╝  ██╔══╝
+# ██║     ███████╗██║
+# ╚═╝     ╚══════╝╚═╝
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf/shell/completion.zsh ] && source ~/.fzf/shell/completion.zsh
 [ -f ~/.fzf/shell/key-bindings.zsh ] && source ~/.fzf/shell/key-bindings.zsh
 
 #[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
-
-# --- INIT PROGRAMS AT START UP ---
-eval "$(starship init zsh)" 2>/dev/null
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
