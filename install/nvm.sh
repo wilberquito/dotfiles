@@ -10,15 +10,8 @@
 # Author: wilberquito
 # License: WTFPL
 # Description:
-# 	- Install Zsh
-#
+# 	- Install node version manager
 # Requirements:
-# 	- dnf
+# 	- curl
 
-if test ! $(which zsh)
-then
-	echo "	Installing Zsh for you."
-	dnf -y install zsh
-fi
-
-exit 0
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash

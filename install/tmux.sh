@@ -13,6 +13,7 @@
 # 	- Install tmux
 # Requirements:
 # 	- dnf
+# 	- git
 
 if test ! $(which tmux)
 then
