@@ -4,12 +4,20 @@ This repository tends to be a solution to automate the installation
 of main programs, set their configurations via soft links and finally
 bootstrap the system.
 
-Installation steps:
+Dev steps:
 
 1. Clone the glorified dotfiles repository.
 
     ```sh
-    $ git clone --depth 1 https://github.com/wilberquito/dotfiles
+    $ git clone https://github.com/wilberquito/dotfiles
+    ```
+
+Use steps:
+
+1. Clone the glorified dotfiles repository.
+
+    ```sh
+    $ git clone --depth 1 --recurse-submodules https://github.com/wilberquito/dotfiles
     ```
 
 2. Change directory to script section.
