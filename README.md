@@ -9,7 +9,7 @@ Dev steps:
 1. Clone the glorified dotfiles repository.
 
     ```sh
-    $ git clone https://github.com/wilberquito/dotfiles
+    $ git clone git@github.com:wilberquito/dotfiles.git
     ```
 
 Use steps:
