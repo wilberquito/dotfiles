@@ -16,6 +16,17 @@
 
 
 
+# -- dummy functions -- #
+
+user () {
+	printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+}
+
+
+# -- here comes the important shit -- #
+
+
+
 # ███████╗██╗  ██╗███████╗██╗     ██╗
 # ██╔════╝██║  ██║██╔════╝██║     ██║
 # ███████╗███████║█████╗  ██║     ██║
@@ -24,20 +35,6 @@
 # ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
 chsh -s $(which zsh)
-
-
-
-# ████████╗███╗   ███╗██╗   ██╗██╗  ██╗
-# ╚══██╔══╝████╗ ████║██║   ██║╚██╗██╔╝
-#    ██║   ██╔████╔██║██║   ██║ ╚███╔╝
-#    ██║   ██║╚██╔╝██║██║   ██║ ██╔██╗
-#    ██║   ██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗
-#    ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
-
-tmux new -d -s mySession
-tmux send-keys -t mySession.1 "tmux source-file ~/.tmux.conf" ENTER
-# TODO: install the plugins C-space I automatically
-tmux kill-server
 
 
 
@@ -50,3 +47,23 @@ tmux kill-server
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install node
+
+
+
+#  ██████╗ ██╗████████╗██╗  ██╗██╗   ██╗██████╗
+# ██╔════╝ ██║╚══██╔══╝██║  ██║██║   ██║██╔══██╗
+# ██║  ███╗██║   ██║   ███████║██║   ██║██████╔╝
+# ██║   ██║██║   ██║   ██╔══██║██║   ██║██╔══██╗
+# ╚██████╔╝██║   ██║   ██║  ██║╚██████╔╝██████╔╝
+#  ╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═════╝
+
+if test $(which gh)
+then
+  user ' - Wanna log to use GitHub Cli? [Y/n]'
+  read -e log
+
+  if [[ "$log" == "Y" ]]
+  then
+    gh auth login
+  fi
+fi
