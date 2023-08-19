@@ -34,7 +34,10 @@ user () {
 # ███████║██║  ██║███████╗███████╗███████╗
 # ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
 
-chsh -s $(which zsh)
+if test $(which zsh)
+then
+  chsh -s $(which zsh)
+fi
 
 
 
