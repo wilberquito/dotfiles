@@ -1,0 +1,24 @@
+[desktop/wm/keybindings]
+maximize=['<Alt>k']
+unmaximize=['<Alt>j']
+
+[mutter/keybindings]
+toggle-tiled-left=['<Alt>h']
+toggle-tiled-right=['<Alt>l']
+
+[settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+screensaver=['<Alt>q']
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Alt>t'
+command='kitty'
+name='Kitty'
+
+[settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Alt>f'
+command='firefox'
+name='Firefox'
+
+[shell/keybindings]
+toggle-message-tray=['<Alt>v']
