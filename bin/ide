@@ -2,20 +2,32 @@
 
 # ██████╗ ███████╗ █████╗ ██████╗ ███╗   ███╗███████╗
 # ██╔══██╗██╔════╝██╔══██╗██╔══██╗████╗ ████║██╔════╝
-# ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗  
-# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝  
+# ██████╔╝█████╗  ███████║██║  ██║██╔████╔██║█████╗
+# ██╔══██╗██╔══╝  ██╔══██║██║  ██║██║╚██╔╝██║██╔══╝
 # ██║  ██║███████╗██║  ██║██████╔╝██║ ╚═╝ ██║███████╗
 # ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝     ╚═╝╚══════╝
 #
 # Author: wilberquito
 # License: WTFPL
 # Description:
-# 	- Emulates the behavior of an ide. 
+# 	- Emulates the behavior of an ide.
 # 	  Opening 3 panes that run: vi, git status and git log
 # Requirements:
 # 	- tmux
-                                                   
-tmux new-session \; \
+
+fail () {
+	printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+	echo ''
+	exit
+}
+
+session_location="$1"
+
+if ! [ -d $session_location ] ; then
+  fail $("Location - $session_location does not exist.")
+fi
+
+tmux new-session -c "$session_location" \; \
   split-window -h -p 65 \; \
   send-keys 'vi .' C-m \; \
   select-pane -t 1 \; \
