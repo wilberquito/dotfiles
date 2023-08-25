@@ -28,7 +28,7 @@ if ! [ -d $session_location ] ; then
 fi
 
 tmux new-session -c "$session_location" \; \
-  split-window -h -p 65 \; \
+  split-window -h -p 67 \; \
   send-keys 'vi .' C-m \; \
   select-pane -t 1 \; \
   send-keys 'git status -u --short' C-m \; \
