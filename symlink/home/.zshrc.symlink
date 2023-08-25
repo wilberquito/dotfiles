@@ -179,4 +179,4 @@ unset __conda_setup
 #╚██████╔╝██║  ██║╚██████╗╚██████╔╝██║
 # ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝
 
-[ -f "/home/wilberquito/.ghcup/env" ] && source "/home/wilberquito/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
