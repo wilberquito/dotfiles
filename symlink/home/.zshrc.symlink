@@ -76,10 +76,10 @@ ZSH_THEME="steeef"
 plugins=(
   aliases
   z
-	git
+  git
   command-not-found
-	zsh-autosuggestions
-	)
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
