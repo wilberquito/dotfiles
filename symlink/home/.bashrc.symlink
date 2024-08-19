@@ -1,3 +1,8 @@
+# Set zsh as default terminal if installed
+if [ -x "$(command -v zsh)" ]; then
+  bash -c zsh
+fi
+
 # .bashrc
 
 # Source global definitions
