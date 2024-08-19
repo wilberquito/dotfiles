@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Works with tmux 2.6 on Ubuntu 18.04. Your mileage may vary.
+# 'send-keys' exists only to show/prove what's going where: the space prevents command history retention
+#   and the hashtag indicates a comment so bash doesn't try to run it.
+#
+#
+# Author: wilberquito
+# License: WTFPL
+# Description:
+# - Opens a core working windows to work in any project
+
+
+session="core"
+
+
+# Create new session, and extra windows (open editor)
+tmux new-session -d -s $session -n Window\ 1
+tmux send-keys 'nvim .' C-m
+
+# A second whole window! (working directory)
+tmux new-window -t $session:2 -n Window\ 2
+tmux send-keys 'ls -la' C-m
+
+# A third whole window! (git)
+tmux new-window -t $session:3 -n Window\ 3
+tmux send-keys 'git log --oneline 2> /dev/null || top' C-m
+
+# Select the first windows
+tmux select-window -t $session:1
+
+# Make it so. This must be the very last command.
+tmux attach-session -t $session
