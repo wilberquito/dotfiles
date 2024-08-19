@@ -11,7 +11,7 @@
 # - Opens a core working windows to work in any project
 
 
-session="core"
+session="$1"
 
 
 # Create new session, and extra windows (open editor)
