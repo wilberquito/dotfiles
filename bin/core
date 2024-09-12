@@ -16,18 +16,20 @@ session="core"
 
 # Create new session, and extra windows (open editor)
 tmux new-session -d -s $session -n Window\ 1
-tmux send-keys 'nvim .' C-m
+tmux send-keys 'nvim .' 'C-m'
+tmux rename-window 'Vim based editor'
 
 # A second whole window! (working directory)
 tmux new-window -t $session:2 -n Window\ 2
-tmux send-keys 'ls -la' C-m
+tmux send-keys 'ls -la' 'C-m'
 
-# A third whole window! (git)
+# A third whole window!
 tmux new-window -t $session:3 -n Window\ 3
-tmux send-keys 'git log --oneline 2> /dev/null || top' C-m
+tmux send-keys 'git log --oneline 2> /dev/null || top' 'C-m'
+tmux split-window -h "watch 'ps aux | sort -nrk 3,3 | head -n 5'" 'C-m'
 
 # Select the first windows
 tmux select-window -t $session:1
 
-# Make it so. This must be the very last command.
+# Attach the tmux session
 tmux attach-session -t $session
