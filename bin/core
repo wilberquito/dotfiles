@@ -21,12 +21,14 @@ tmux rename-window 'Vim based editor'
 
 # A second whole window! (working directory)
 tmux new-window -t $session:2 -n Window\ 2
-tmux send-keys 'ls -la' 'C-m'
+tmux send-keys 'ls -lah' 'C-m'
+tmux rename-window 'List directory tree'
 
 # A third whole window!
 tmux new-window -t $session:3 -n Window\ 3
 tmux send-keys 'git log --oneline 2> /dev/null || top' 'C-m'
 tmux split-window -h "watch 'ps aux | sort -nrk 3,3 | head -n 5'" 'C-m'
+tmux rename-window 'Running subprocesses'
 
 # Select the first windows
 tmux select-window -t $session:1
