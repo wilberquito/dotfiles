@@ -13,6 +13,10 @@
 
 session="$1"
 
+if [[ "$session" == "." || "$session" == "" ]]; then
+  session="tmp"
+fi
+
 
 # Create new session, and extra windows (open editor)
 tmux new-session -d -s $session -n Window\ 1
