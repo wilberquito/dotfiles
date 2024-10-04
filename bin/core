@@ -17,28 +17,32 @@ if [[ "$session" == "." || "$session" == "" ]]; then
   session="tmp"
 fi
 
+if tmux has-session -t $session 2>/dev/null; then
+  tmux attach -t $session
+else
+  # Free terminal
+  tmux new-session -d -s $session -n Window\ 1
+  tmux send-keys 'ls -lah' 'C-m'
+  tmux rename-window 'Terminal 1'
 
-# Create new session, and extra windows (open editor)
-tmux new-session -d -s $session -n Window\ 1
-tmux send-keys 'nvim .' 'C-m'
-tmux rename-window 'Vim editor'
+  # Free terminal
+  tmux new-window -t $session:2 -n Window\ 2
+  tmux send-keys 'ls -lah' 'C-m'
+  tmux rename-window 'Terminal 2'
 
-# List working directory
-tmux new-window -t $session:2 -n Window\ 2
-tmux send-keys 'ls -lah' 'C-m'
-tmux rename-window 'Terminal 1'
+  # Open editor
+  tmux new-window -t $session:3 -n Window\ 3
+  tmux send-keys 'nvim .' 'C-m'
+  tmux rename-window 'Vim editor'
 
-# Git log if running if over a git repo
-tmux new-window -t $session:3 -n Window\ 3
-tmux send-keys 'ls -lah' 'C-m'
-tmux rename-window 'Terminal 2'
+  # Running subprocesses
+  tmux new-window -t $session:4 -n Window\ 4
+  tmux send-keys "watch 'ps aux | sort -nrk 3,3 | head -n 5'" 'C-m'
+  tmux rename-window 'Running subprocesses'
 
-tmux new-window -t $session:4 -n Window\ 4
-tmux send-keys "watch 'ps aux | sort -nrk 3,3 | head -n 5'" 'C-m'
-tmux rename-window 'Running subprocesses'
+  # Select the first windows
+  tmux select-window -t $session:1
 
-# Select the first windows
-tmux select-window -t $session:1
-
-# Attach the tmux session
-tmux attach-session -t $session
+  # Attach the tmux session
+  tmux attach-session -t $session
+fi
