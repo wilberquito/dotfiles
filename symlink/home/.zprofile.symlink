@@ -1,0 +1,104 @@
+# ███████╗███╗   ██╗██╗   ██╗██╗██████╗  ██████╗ ███╗   ██╗███╗   ███╗███████╗███╗   ██╗████████╗
+# ██╔════╝████╗  ██║██║   ██║██║██╔══██╗██╔═══██╗████╗  ██║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝
+# █████╗  ██╔██╗ ██║██║   ██║██║██████╔╝██║   ██║██╔██╗ ██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║
+# ██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██║██╔══██╗██║   ██║██║╚██╗██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║
+# ███████╗██║ ╚████║ ╚████╔╝ ██║██║  ██║╚██████╔╝██║ ╚████║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║
+# ╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝
+
+export EDITOR=$(which nvim)
+export GIT_EDITOR=$(which nvim)
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Added by Toolbox App
+export PATH="$PATH:/home/wilber/.local/share/JetBrains/Toolbox/scripts"
+
+# <<< coursier install directory <<<
+export PATH="$PATH:/home/wilber/.local/share/coursier/bin"
+
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/wilber/.local/share/coursier/bin"
+# <<< coursier install directory <<<
+
+# ███████╗███████╗███████╗
+# ██╔════╝╚══███╔╝██╔════╝
+# █████╗    ███╔╝ █████╗
+# ██╔══╝   ███╔╝  ██╔══╝
+# ██║     ███████╗██║
+# ╚═╝     ╚══════╝╚═╝
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf/shell/completion.zsh ] && source ~/.fzf/shell/completion.zsh
+[ -f ~/.fzf/shell/key-bindings.zsh ] && source ~/.fzf/shell/key-bindings.zsh
+
+# ███╗   ██╗██╗   ██╗███╗   ███╗
+# ████╗  ██║██║   ██║████╗ ████║
+# ██╔██╗ ██║██║   ██║██╔████╔██║
+# ██║╚██╗██║╚██╗ ██╔╝██║╚██╔╝██║
+# ██║ ╚████║ ╚████╔╝ ██║ ╚═╝ ██║
+# ╚═╝  ╚═══╝  ╚═══╝  ╚═╝     ╚═╝
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# ████████╗███╗   ███╗██╗   ██╗██╗  ██╗
+# ╚══██╔══╝████╗ ████║██║   ██║╚██╗██╔╝
+#    ██║   ██╔████╔██║██║   ██║ ╚███╔╝
+#    ██║   ██║╚██╔╝██║██║   ██║ ██╔██╗
+#    ██║   ██║ ╚═╝ ██║╚██████╔╝██╔╝ ██╗
+#    ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝
+
+[[ "$TERM" == "tmux-256color" ]] && tmux source-file ~/.tmux.conf
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="$HOME/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+
+# ██████╗ ██╗  ██╗ ██████╗██╗   ██╗██████╗
+#██╔════╝ ██║  ██║██╔════╝██║   ██║██╔══██╗
+#██║  ███╗███████║██║     ██║   ██║██████╔╝
+#██║   ██║██╔══██║██║     ██║   ██║██╔═══╝
+#╚██████╔╝██║  ██║╚██████╗╚██████╔╝██║
+# ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝
+
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
