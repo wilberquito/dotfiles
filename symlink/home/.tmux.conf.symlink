@@ -18,9 +18,6 @@ set -g base-index 1
 # 1-indexed panes to match the windows.
 setw -g pane-base-index 1
 
-# Look nice.
-set -g default-terminal screen-256color
-
 # MOAR HISTORY BUFFER!
 setw -g history-limit 1000000
 
@@ -97,3 +94,9 @@ bind-key s setw synchronize-panes
 
 setw -g window-status-current-format '#[bg=colour244 fg=white]#{?pane_synchronized,#[bg=yellow],} #I:#W '
 setw -g window-status-format         '#{?pane_synchronized,#[bg=yellow fg=black],} #I:#W '
+
+set-option -sg escape-time 10
+set-option -g focus-events on
+# Look nice.
+set -g default-terminal screen-256color
+set-option -a terminal-features 'xterm-256color:RGB'
