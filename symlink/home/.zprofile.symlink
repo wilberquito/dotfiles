@@ -36,15 +36,13 @@ fi
 # Added by Toolbox App
 export PATH="$PATH:/home/wilber/.local/share/JetBrains/Toolbox/scripts"
 
-# <<< coursier install directory <<<
-export PATH="$PATH:/home/wilber/.local/share/coursier/bin"
-
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
+
 # >>> coursier install directory >>>
-export PATH="$PATH:/home/wilber/.local/share/coursier/bin"
+export PATH="$PATH:/$HOME/.local/share/coursier/bin"
 # <<< coursier install directory <<<
 
 # ███████╗███████╗███████╗
