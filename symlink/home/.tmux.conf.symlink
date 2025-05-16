@@ -102,8 +102,14 @@ set -g default-terminal screen-256color
 set-option -a terminal-features 'xterm-256color:RGB'
 
 
+# Enter a tmux copy mode
+unbind-key [
+bind-key v copy-mode
+
+# How to navigate in visual mode (uses vim style [j,k,h,l])
 setw -g mode-keys vi
 
+# Mapping on tmux copy mode so it gets similar to vim
 bind-key -T copy-mode-vi v send -X begin-selection
 bind-key -T copy-mode-vi V send -X select-line
 bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
