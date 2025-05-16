@@ -100,3 +100,10 @@ set-option -g focus-events on
 # Look nice.
 set -g default-terminal screen-256color
 set-option -a terminal-features 'xterm-256color:RGB'
+
+
+setw -g mode-keys vi
+
+bind-key -T copy-mode-vi v send -X begin-selection
+bind-key -T copy-mode-vi V send -X select-line
+bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
