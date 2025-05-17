@@ -23,11 +23,11 @@ else
 
   # Terminal in the second window
   tmux new-window -t "$session:2" -n "Terminal"
-  tmux send-keys -t "$session:2" "ls -lah" C-m
+  tmux send-keys -t "$session:2" "fortune | cowsay ; ls -lah" C-m
 
   # Running subprocesses in the first window
   tmux new-window -t "$session:3" -n "Terminal"
-  tmux send-keys -t "$session:3" "watch 'ps aux | sort -nrk 3,3 | head -n 15'" C-m
+  tmux send-keys -t "$session:3" "fortune | cowsay ; ls -lah" C-m
 
   # Select the window of interest
   tmux select-window -t "$session:1"
