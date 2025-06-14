@@ -1,7 +1,9 @@
 # Set zsh as default terminal if installed
 if [ -x "$(command -v zsh)" ]; then
+  echo "setting things"
   bash -c zsh
 fi
+
 
 # .bashrc
 
@@ -30,24 +32,3 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
-
-alias g='git'
-man() { $1 --help; }
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('$HOME/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "$HOME/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="$HOME/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
