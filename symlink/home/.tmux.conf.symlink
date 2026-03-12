@@ -109,6 +109,14 @@ bind-key v copy-mode
 # How to navigate in visual mode (uses vim style [j,k,h,l])
 setw -g mode-keys vi
 
+# Vim style navigation
+# Vim-style pane navigation
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+
 # Mapping on tmux copy mode so it gets similar to vim
 bind-key -T copy-mode-vi v send -X begin-selection
 bind-key -T copy-mode-vi V send -X select-line
