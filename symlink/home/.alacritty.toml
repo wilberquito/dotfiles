@@ -1,42 +1,28 @@
-general.live_config_reload = true
+[general]
+	live_config_reload = true
+	import = [
+	    "~/.config/alacritty/themes/themes/everforest_dark_theme.toml",
+	    "~/.config/alacritty/themes/themes/enfocado_light.toml",
+	    "~/.config/alacritty/themes/themes/Mariana.toml",
+	    "~/.config/alacritty/themes/themes/autumn.toml",
+	    "~/.config/alacritty/themes/themes/gruvbox_dark.toml",
+	    "~/.config/alacritty/themes/themes/gruvbox_material_dark.toml",
+	    "~/.config/alacritty/themes/themes/hardhacker.toml",
+	    "~/.config/alacritty/themes/themes/high_contrast.toml",
+	    "~/.config/alacritty/themes/themes/material_theme_mod.toml",
+	]
 
 [window]
-decorations = "Transparent"
-opacity = 0.95
-blur = false
+	decorations = "Transparent"
+	opacity = 0.95
+	blur = false
 
 [cursor]
-style = { shape = "Block", blinking = "Always" }
-blink_interval = 600
-blink_timeout = 0
-unfocused_hollow = true
+	style = { shape = "Block", blinking = "Always" }
+	blink_interval = 600
+	blink_timeout = 0
+	unfocused_hollow = true
 
-[colors]
-    draw_bold_text_with_bright_colors = true
-
-    [colors.bright]
-        black   = "#625e4c"
-        blue    = "#9d65ff"
-        cyan    = "#58d1eb"
-        green   = "#98e024"
-        magenta = "#f4005f"
-        red     = "#f4005f"
-        white   = "#f6f6ef"
-        yellow  = "#e0d561"
-
-    [colors.normal]
-        black   = "#1a1a1a"
-        blue    = "#9d65ff"
-        cyan    = "#58d1eb"
-        green   = "#98e024"
-        magenta = "#f4005f"
-        red     = "#f4005f"
-        white   = "#c4c5b5"
-        yellow  = "#fa8419"
-
-    [colors.primary]
-        background = "0x1a1b26"
-        foreground = "0xa9b1d6"
 
 [env]
     TERM = "xterm-256color"
