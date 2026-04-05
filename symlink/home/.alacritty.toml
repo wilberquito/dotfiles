@@ -14,8 +14,9 @@
 
 [window]
 	decorations = "Transparent"
-	opacity = 0.95
+	opacity = 0.85
 	blur = false
+	startup_mode = "SimpleFullscreen"
 
 [cursor]
 	style = { shape = "Block", blinking = "Always" }
