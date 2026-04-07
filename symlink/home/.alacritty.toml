@@ -16,7 +16,8 @@
 	decorations = "Transparent"
 	opacity = 0.9
 	blur = false
-	startup_mode = "SimpleFullscreen"
+# startup_mode = "SimpleFullscreen"
+	startup_mode = "Fullscreen"
 
 [cursor]
 	style = { shape = "Block", blinking = "Always" }
