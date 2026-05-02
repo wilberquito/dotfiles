@@ -20,3 +20,6 @@ alias repos="cd ~/repos"
 alias dloads="cd ~/Downloads/"
 alias dotfiles="cd ~/repos/dotfiles/"
 alias chad="cd ~/repos/nvchad.lua/"
+
+# Cat image in kitty terminal
+alias icat='kitten icat'
