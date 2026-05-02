@@ -141,6 +141,11 @@ bind-key -T copy-mode-vi v send -X begin-selection
 bind-key -T copy-mode-vi V send -X select-line
 bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
 
+# Kitty terminal integration
+set -g allow-passthrough on
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",xterm-kitty:Tc"
+
 # Init tmux plugin manager
 run '~/.tmux/plugins/tpm/tpm'
 
