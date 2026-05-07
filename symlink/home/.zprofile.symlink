@@ -97,12 +97,12 @@ fi
 unset __conda_setup
 
 
-# ██████╗ ██╗  ██╗ ██████╗██╗   ██╗██████╗
-#██╔════╝ ██║  ██║██╔════╝██║   ██║██╔══██╗
-#██║  ███╗███████║██║     ██║   ██║██████╔╝
-#██║   ██║██╔══██║██║     ██║   ██║██╔═══╝
-#╚██████╔╝██║  ██║╚██████╗╚██████╔╝██║
-# ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝
+#  ██████╗ ██╗  ██╗ ██████╗██╗   ██╗██████╗
+# ██╔════╝ ██║  ██║██╔════╝██║   ██║██╔══██╗
+# ██║  ███╗███████║██║     ██║   ██║██████╔╝
+# ██║   ██║██╔══██║██║     ██║   ██║██╔═══╝
+# ╚██████╔╝██║  ██║╚██████╗╚██████╔╝██║
+#  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝
 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
@@ -116,13 +116,17 @@ unset __conda_setup
 # ██║        ██║   ███████╗██║ ╚████║ ╚████╔╝ 
 # ╚═╝        ╚═╝   ╚══════╝╚═╝  ╚═══╝  ╚═══╝  
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+if [ -d $PYENV_ROOT/bin ]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - zsh)"
+else
+  echo "WARN: pyenv not found, please install it from"
+fi
 
-eval "$(pyenv init - zsh)"
+
 
 
 # ██╗  ██╗██╗████████╗████████╗██╗   ██╗        ███████╗███████╗██╗  ██╗
